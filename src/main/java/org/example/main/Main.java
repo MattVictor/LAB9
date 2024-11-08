@@ -1,14 +1,11 @@
 package org.example.main;
 
-import org.example.controller.AssentoListener;
-import org.example.controller.AssentosController;
+import org.example.controller.*;
+import org.example.model.*;
+import org.example.view.*;
 import org.example.exceptions.AssentoIndisponivel;
 import org.example.exceptions.AssentoInvalido;
 import org.example.exceptions.OnibusInvalido;
-import org.example.model.Onibus;
-import org.example.model.Rodoviaria;
-import org.example.view.PainelCentral;
-import org.example.view.Quiosque;
 
 import java.util.Date;
 
@@ -64,17 +61,17 @@ public class Main {
     }
 
     private static Date[] definirHorariosChegada() {
-        Date horario1 = new Date(9,11,2024,6,30);
-        Date horario2 = new Date(9,11,2024,7,30);
-        Date horario3 = new Date(9,11,2024,8,00);
+        Date horario1 = new Date(2024,11,9,6,30);
+        Date horario2 = new Date(2024,11,9,7,30);
+        Date horario3 = new Date(2024,11,9,8,00);
 
         return new Date[]{horario1, horario2, horario3};
     }
 
     private static Date[] definirHorariosSaida() {
-        Date horario1 = new Date(9,11,2024,7,30);
-        Date horario2 = new Date(9,11,2024,8,30);
-        Date horario3 = new Date(9,11,2024,9,00);
+        Date horario1 = new Date(2024,11,9,7,30);
+        Date horario2 = new Date(2024,11,9,8,30);
+        Date horario3 = new Date(2024,11,9,9,00);
 
         return new Date[]{horario1, horario2, horario3};
     }

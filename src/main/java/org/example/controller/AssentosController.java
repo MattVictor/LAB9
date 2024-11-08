@@ -3,11 +3,7 @@ package org.example.controller;
 import org.example.exceptions.AssentoIndisponivel;
 import org.example.exceptions.AssentoInvalido;
 import org.example.exceptions.OnibusInvalido;
-import org.example.model.Assento;
-import org.example.model.Onibus;
-import org.example.model.Rodoviaria;
-import org.example.view.PainelCentral;
-import org.example.view.Quiosque;
+import org.example.model.*;
 
 import java.util.ArrayList;
 
@@ -62,7 +58,7 @@ public class AssentosController {
         assento.disponibilizarAssento();
     }
 
-    private Onibus findOnibus(int numOnibus) throws OnibusInvalido {
+    public Onibus findOnibus(int numOnibus) throws OnibusInvalido {
 
         for (Onibus onibus : rodoviaria.getFrota()) {
             if (onibus.getNumero() == numOnibus) {
@@ -72,7 +68,7 @@ public class AssentosController {
         throw new OnibusInvalido("O ônibus "+numOnibus+" não existe ou não está disponível.");
     }
 
-    private Assento findAssento(int numAssento, Onibus onibus) throws AssentoInvalido {
+    public Assento findAssento(int numAssento, Onibus onibus) throws AssentoInvalido {
 
         for (Assento assento : onibus.getAssentos()) {
             if (assento.getNumero() == numAssento) {

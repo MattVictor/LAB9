@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class Assento {
 
     private int numero;
-    private int numOnibus;
     private String status;
     private String ocupante;
     private final ArrayList<AssentoListener> listeners = new ArrayList<>();
@@ -82,9 +81,5 @@ public class Assento {
 
     public String getOcupante() {
         return ocupante;
-    }
-
-    public int getNumOnibus() {
-        return numOnibus;
     }
 }

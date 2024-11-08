@@ -1,10 +1,7 @@
 package org.example.view;
 
-import org.example.controller.AssentoEvent;
-import org.example.controller.AssentoListener;
-import org.example.controller.AssentosController;
-import org.example.model.Assento;
-import org.example.model.Onibus;
+import org.example.controller.*;
+import org.example.model.*;
 
 import java.util.ArrayList;
 
